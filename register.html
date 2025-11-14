@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Toko Sepatu</title>
+    <link rel="icon" href="StepUp rmvbg white.png" type="png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">StepUp</h1>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="register.html" class="active">Register</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Buat Akun Baru</h2>
+            <p>Daftar untuk mendapatkan penawaran eksklusif dan informasi produk terbaru.</p>
+            <form action="#" method="POST" class="form-minimal">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Kata Sandi</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn">Daftar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Toko Sepatu StepUp. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.main-nav');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('is-active');
+        });
+    </script>
+    
+</body>
+</html>

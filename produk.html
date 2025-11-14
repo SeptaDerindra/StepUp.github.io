@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Produk - Toko Sepatu</title>
+    <link rel="icon" href="StepUp rmvbg white.png" type="png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">StepUp</h1>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produk.html" class="active">Produk</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="all-products">
+            <h2>Semua Koleksi</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Sepatu Lari nike.avif" alt="Sepatu Lari Merah">
+                    <h3>Sepatu Lari Cepat</h3>
+                    <p class="price">Rp 750.000</p>
+                    <a href="detail-produk-lari.html" class="btn-secondary">Lihat Detail</a>
+                </div>
+                <div class="product-card">
+                    <img src="Sepatu Kasual Elegan nike.avif" alt="Sepatu Kasual Wanita">
+                    <h3>Sepatu Kasual Elegan</h3>
+                    <p class="price">Rp 550.000</p>
+                    <a href="detail-produk-kasual.html" class="btn-secondary">Lihat Detail</a>
+                </div>
+                <div class="product-card">
+                    <img src="Sneaker Putih Klasik nike.avif" alt="Sepatu Sneaker Putih">
+                    <h3>Sneaker Putih Klasik</h3>
+                    <p class="price">Rp 620.000</p>
+                    <a href="detail-produk-sneaker.html" class="btn-secondary">Lihat Detail</a>
+                </div>
+                <div class="product-card">
+                    <img src="boots nike.jpg" alt="Sepatu Boots">
+                    <h3>Sepatu Boots Tangguh</h3>
+                    <p class="price">Rp 980.000</p>
+                    <a href="detail-produk-boots.html" class="btn-secondary">Lihat Detail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Toko Sepatu StepUp. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.main-nav');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('is-active');
+        });
+    </script>
+    
+</body>
+</html>

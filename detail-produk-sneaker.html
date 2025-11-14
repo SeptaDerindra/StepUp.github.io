@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Sneaker Putih Klasik</title>
+    <link rel="icon" href="StepUp rmvbg white.png" type="png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">StepUp</h1>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produk.html" class="active">Produk</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="product-detail">
+            <img src="Sneaker Putih Klasik nike.avif" alt="Sepatu Sneaker Putih" class="product-image-large">
+            <div class="product-info">
+                <h2>Sneaker Putih Klasik</h2>
+                <p class="price">Rp 620.000</p>
+                <p class="description">
+                    Sneaker putih klasik yang wajib ada di koleksi Anda. Desainnya yang timeless dan serbaguna membuatnya mudah dipadukan dengan outfit apa pun. Dibuat untuk kenyamanan maksimal saat beraktivitas.
+                </p>
+                <button class="btn">Beli Sekarang</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Toko Sepatu StepUp. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.main-nav');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('is-active');
+        });
+    </script>
+    
+</body>
+</html>

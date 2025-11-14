@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0a84ff; 
+    --background-color: #f7f8fa;
+    --text-color: #555;
+    --heading-color: #1d1d1f;
+    --surface-color: #ffffff;
+    --border-color: #e5e5e5;
+    --shadow: 0 8px 24px rgba(29, 29, 31, 0.07);
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+
+nav.main-nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none; /* Sembunyikan di desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--heading-color);
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.hero p {
+    font-size: 1.1rem;    
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000;
+    color: var(--surface-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--surface-color);
+    color: var(--heading-color);
+    border: 1px solid #ccc;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.featured-products h2, .all-products h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+ 
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 15px 0 5px;
+    color: var(--heading-color);
+}
+
+.price {
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-detail {
+    display: flex;
+    gap: 40px;
+    background: var(--surface-color);
+    padding: 30px;
+    border-radius: 8px;
+}
+.product-image-large {
+    max-width: 50%;
+    border-radius: 8px;
+}
+.product-info .price {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.product-info .description {
+    margin-bottom: 20px;
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--surface-color);
+    padding: 30px 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.form-section p {
+    margin-bottom: 30px;
+}
+
+.form-minimal {
+    text-align: left;
+}
+
+.form-minimal label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--heading-color);
+    font-weight: bold;
+}
+
+.form-minimal input,
+.form-minimal textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--background-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-minimal input:focus,
+.form-minimal textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.2);
+}
+
+.form-minimal button {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .product-detail {
+        flex-direction: column;
+    }
+
+    .product-image-large {
+        max-width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+    }
+
+    .hamburger {
+        display: block; /* Tampilkan di mobile */
+    }
+
+    .hamburger.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav.main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Mulai dari luar layar */
+        width: 70%;
+        height: 100vh;
+        background-color: var(--surface-color);
+        padding-top: 80px;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    nav.main-nav.nav-active {
+        right: 0; /* Pindahkan ke dalam layar */
+    }
+
+    nav.main-nav ul.nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    nav.main-nav ul.nav-links li a {
+        display: block;
+        padding: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- Service Advantages Section --- */
+.service-advantages {
+    margin-bottom: 40px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.advantage-item {
+    background-color: var(--surface-color);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.advantage-icon {
+    margin-bottom: 15px;
+}
+
+.advantage-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--primary-color);
+}
+
+.advantage-item h3 {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* --- About Us Section --- */
+.about-us {
+    background-color: var(--surface-color);
+    padding: 60px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
